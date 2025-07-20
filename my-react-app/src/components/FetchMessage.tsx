@@ -5,7 +5,7 @@ export const fetchMessage = (): Promise<string> => {
             if (shouldFail) {
                 reject(new Error('Failed to fetch message'))
             } else {
-                resolve('Hello, World!')
+                resolve('All required data were collected succesfully!')
             }
         }, 1000)
     })

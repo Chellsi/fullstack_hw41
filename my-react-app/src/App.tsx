@@ -8,11 +8,13 @@ export default function App() {
   const messagePromise = fetchMessage()
 
   return (
-    <AppErrorBoundary>
-      <Suspense fallback={<div>Loading...</div>}>
-        <MessageComponent messagePromise ={messagePromise} />
-      </Suspense>
-    </AppErrorBoundary>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200">
+      <AppErrorBoundary>
+        <Suspense fallback={<div className="text-lg text-gray-600 animate-pulse">Loading...</div>}>
+          <MessageComponent messagePromise={messagePromise} />
+        </Suspense>
+      </AppErrorBoundary>
+    </div>
   )
 }
 

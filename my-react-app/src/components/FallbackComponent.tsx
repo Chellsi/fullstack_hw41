@@ -4,9 +4,9 @@ interface FallbackComponentProps {
 
 const FallbackComponent = ({error}: FallbackComponentProps) => {
     return (
-        <div className="bg-red-500 text-white p-4 rounded-md">
-            <h1>Error</h1>
-            <p>{error.message}</p>
+        <div className="bg-red-500 text-white p-6 rounded-md shadow-lg flex flex-col items-center justify-center max-w-md mx-auto">
+            <h1 className="text-2xl font-bold mb-2">Error</h1>
+            <p className="text-lg text-center">{error.message}</p>
         </div>
     )
 }
